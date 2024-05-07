@@ -1763,6 +1763,8 @@ GameObject:
   - component: {fileID: 611683656}
   - component: {fileID: 611683657}
   - component: {fileID: 611683658}
+  - component: {fileID: 611683659}
+  - component: {fileID: 611683660}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Controller
@@ -1876,6 +1878,41 @@ MonoBehaviour:
   _planes:
   - {fileID: 21300000, guid: ab755af726e3f4198bca654c70275ab2, type: 3}
   - {fileID: 21300000, guid: 8bb7724899b3b4a5fb8c160f97647677, type: 3}
+--- !u!114 &611683659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611683651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 872db620bf79b4edcb93747b8d12c177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _constructions:
+  - {fileID: 1467366224}
+  - {fileID: 148453813}
+  - {fileID: 1535676578}
+--- !u!114 &611683660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611683651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d2b817b0853e421fb57cbb169e3cdfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _background: {fileID: 505414842}
+  _backgrounds:
+  - {fileID: 21300000, guid: 0327d12e2e3e6496bad5bb6d79913543, type: 3}
+  - {fileID: 21300000, guid: cae160d48fb9a48a5b5a765328adab79, type: 3}
+  - {fileID: 21300000, guid: d1087fb6350584a469ad7662e9adb977, type: 3}
+  - {fileID: 21300000, guid: e0f256084e1874396a5d8ad806ba790b, type: 3}
+  - {fileID: 21300000, guid: 8d6f80a9205a548b9be6a634c22517d2, type: 3}
 --- !u!1 &644448306
 GameObject:
   m_ObjectHideFlags: 0
@@ -3132,7 +3169,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8bb7724899b3b4a5fb8c160f97647677, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ab755af726e3f4198bca654c70275ab2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3603,7 +3640,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1467366225
 Transform:
   m_ObjectHideFlags: 0
