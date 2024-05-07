@@ -40,11 +40,12 @@ public class MissleFlight : MonoBehaviour
             Destroy(goodExplosion, 0.5f);
             Destroy(gameObject);
             ScoreController.Score++;
-            if (ScoreController.Score > ScoreController.BestScore)
-            {
-                ScoreController.BestScore = ScoreController.Score;
-                PlayerPrefs.SetInt("BestScore", ScoreController.BestScore);
-            }
+
+            //if (ScoreController.Score > ScoreController.BestScore)
+            //{
+            //    ScoreController.BestScore = ScoreController.Score;
+            //    PlayerPrefs.SetInt("BestScore", ScoreController.BestScore);
+            //}
         }
     }
 }

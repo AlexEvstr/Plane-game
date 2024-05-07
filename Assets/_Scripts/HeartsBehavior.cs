@@ -7,6 +7,8 @@ public class HeartsBehavior : MonoBehaviour
     [SerializeField] private GameObject[] _heartsBroken;
     [SerializeField] private GameObject[] _heartsGrey;
 
+    [SerializeField] private GameObject _gameover;
+
     public void LoveHeart()
     {
         StartCoroutine(LoseOneHeart());
@@ -31,6 +33,9 @@ public class HeartsBehavior : MonoBehaviour
             _heartsBroken[0].SetActive(true);
             yield return new WaitForSeconds(0.5f);
             _heartsGrey[0].SetActive(true);
+
+            yield return new WaitForSeconds(0.5f);
+            _gameover.SetActive(true);
         }
     }
 }
