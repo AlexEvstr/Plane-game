@@ -36,6 +36,12 @@ public class MissleFlight : MonoBehaviour
             goodExplosion.transform.position = transform.position;
             Destroy(goodExplosion, 0.5f);
             Destroy(gameObject);
+            ScoreController.Score++;
+            if (ScoreController.Score > ScoreController.BestScore)
+            {
+                ScoreController.BestScore = ScoreController.Score;
+                PlayerPrefs.SetInt("BestScore", ScoreController.BestScore);
+            }
         }
     }
 }
