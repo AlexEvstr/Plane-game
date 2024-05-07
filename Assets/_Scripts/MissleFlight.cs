@@ -7,6 +7,13 @@ public class MissleFlight : MonoBehaviour
 
     private float _speed = 10.0f;
 
+    private CameraShake _cameraShake;
+
+    private void Start()
+    {
+        _cameraShake = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShake>();
+    }
+
     private void Update()
     {
         transform.Translate(Vector2.up * Time.deltaTime * _speed);
@@ -16,6 +23,7 @@ public class MissleFlight : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Construct"))
         {
+            _cameraShake.Shake();
             GameObject badExplosion = Instantiate(_badExplosion);
             badExplosion.transform.position = transform.position;
             Destroy(badExplosion, 0.5f);
