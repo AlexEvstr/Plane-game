@@ -27,8 +27,8 @@ public class CameraShake : MonoBehaviour
 
         while ((timeLeft + _duration) > Time.time)
         {
-            x = Random.Range(-0.3f, 0.3f);
-            y = Random.Range(-0.3f, 0.3f);
+            x = Random.Range(-0.1f, 0.1f);
+            y = Random.Range(-0.1f, 0.1f);
 
             _cameraTransform.position = new Vector3(x, y, _originalPosition.z); yield return new WaitForSeconds(0.025f);
         }
