@@ -197,3 +197,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _badExplosion: {fileID: 6310719206889080142, guid: e6869cba74f8f4137885e8d417c49a9b, type: 3}
+  _goodExplosion: {fileID: 6386151476804513322, guid: 5620dcea5f0e448f5b371d02aad70922, type: 3}
