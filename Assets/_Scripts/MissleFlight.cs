@@ -8,10 +8,12 @@ public class MissleFlight : MonoBehaviour
     private float _speed = 10.0f;
 
     private CameraShake _cameraShake;
+    private HeartsBehavior _heartsBehavior;
 
     private void Start()
     {
         _cameraShake = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShake>();
+        _heartsBehavior = GameObject.FindGameObjectWithTag("Controller").GetComponent<HeartsBehavior>();
     }
 
     private void Update()
@@ -28,6 +30,7 @@ public class MissleFlight : MonoBehaviour
             badExplosion.transform.position = transform.position;
             Destroy(badExplosion, 0.5f);
             Destroy(gameObject);
+            _heartsBehavior.LoveHeart();
         }
 
         else if (collision.gameObject.CompareTag("Border"))
