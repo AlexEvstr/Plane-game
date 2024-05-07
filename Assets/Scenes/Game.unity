@@ -1762,6 +1762,7 @@ GameObject:
   - component: {fileID: 611683655}
   - component: {fileID: 611683656}
   - component: {fileID: 611683657}
+  - component: {fileID: 611683658}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Controller
@@ -1859,6 +1860,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelText: {fileID: 370054895}
+--- !u!114 &611683658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611683651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17bc7768d6091414a858097d963f1312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _plane: {fileID: 1266598868}
+  _planes:
+  - {fileID: 21300000, guid: ab755af726e3f4198bca654c70275ab2, type: 3}
+  - {fileID: 21300000, guid: 8bb7724899b3b4a5fb8c160f97647677, type: 3}
 --- !u!1 &644448306
 GameObject:
   m_ObjectHideFlags: 0
