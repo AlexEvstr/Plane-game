@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MenuButtonsController : MonoBehaviour
 {
+    [SerializeField] private GameObject _levelsPanel;
     public void PlayBtn()
     {
-        SceneManager.LoadScene("Game");
+        _levelsPanel.SetActive(true);
     }
 
     public void ShopBtn()
