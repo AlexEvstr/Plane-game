@@ -35,6 +35,7 @@ public class ScoreController : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         winLevel.SetActive(true);
+        PlayerPrefs.SetString("SameColor", "no");
         LevelController.Level++;
         PlayerPrefs.SetInt("Level", LevelController.Level);
         int bestLevel = PlayerPrefs.GetInt("BestLevel", 1);

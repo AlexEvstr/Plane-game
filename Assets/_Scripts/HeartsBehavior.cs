@@ -36,6 +36,7 @@ public class HeartsBehavior : MonoBehaviour
 
             yield return new WaitForSeconds(0.5f);
             _gameover.SetActive(true);
+            PlayerPrefs.SetString("SameColor", "yes");
         }
     }
 }

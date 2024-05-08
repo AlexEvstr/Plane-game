@@ -284,6 +284,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 148453814}
+  - component: {fileID: 148453815}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -308,6 +309,26 @@ Transform:
   - {fileID: 1808335526}
   m_Father: {fileID: 768656182}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &148453815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148453813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7361e10302e7944ac8b4d8eb4cacdd81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mainSprites:
+  - {fileID: 1200010592}
+  - {fileID: 1808335527}
+  _sprites:
+  - {fileID: 21300000, guid: 25e64c75fbf544b9c93737af71ead10d, type: 3}
+  - {fileID: 21300000, guid: a4de8d31b01ae412c8d52a57aa8603fe, type: 3}
+  - {fileID: 21300000, guid: 18e5030ed7b2b4e17be8fff5753de717, type: 3}
+  - {fileID: 21300000, guid: 920b783d5e12448f6a97f19dfd970bd6, type: 3}
 --- !u!1 &167924732
 GameObject:
   m_ObjectHideFlags: 0
@@ -3634,6 +3655,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1467366225}
+  - component: {fileID: 1467366226}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -3660,6 +3682,28 @@ Transform:
   - {fileID: 303954707}
   m_Father: {fileID: 768656182}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1467366226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467366224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7361e10302e7944ac8b4d8eb4cacdd81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mainSprites:
+  - {fileID: 977808194}
+  - {fileID: 1326676403}
+  - {fileID: 168058669}
+  - {fileID: 303954706}
+  _sprites:
+  - {fileID: 21300000, guid: ea67a27bc807c4f74a42c45f89b8c914, type: 3}
+  - {fileID: 21300000, guid: 3b1e743a7daaa4ee291327d1137642b5, type: 3}
+  - {fileID: 21300000, guid: 672b193be8407456daa807bb47b69ac0, type: 3}
+  - {fileID: 21300000, guid: 2029a909579cf42e3a8196a9087fbb1e, type: 3}
 --- !u!1 &1519971982
 GameObject:
   m_ObjectHideFlags: 0
@@ -3746,6 +3790,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1535676579}
+  - component: {fileID: 1535676580}
+  - component: {fileID: 1535676581}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: Untagged
@@ -3770,6 +3816,40 @@ Transform:
   - {fileID: 701792066}
   m_Father: {fileID: 768656182}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1535676580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535676578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7361e10302e7944ac8b4d8eb4cacdd81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mainSprites:
+  - {fileID: 1362258782}
+  _sprites:
+  - {fileID: 21300000, guid: c2e5018e5e4c140c9a44c9f9af0042e6, type: 3}
+  - {fileID: 21300000, guid: 11d07e5eed0574642b57b0fa0a59473c, type: 3}
+--- !u!114 &1535676581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535676578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7361e10302e7944ac8b4d8eb4cacdd81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mainSprites:
+  - {fileID: 701792067}
+  _sprites:
+  - {fileID: 21300000, guid: b08919b168e484bf985224103a173451, type: 3}
+  - {fileID: 21300000, guid: 6800712156fc6419c81d32277de56e13, type: 3}
 --- !u!1 &1539723375
 GameObject:
   m_ObjectHideFlags: 0
@@ -4882,8 +4962,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280690371
-  m_fontColor: {r: 0.764151, g: 0.1477839, b: 0.1477839, a: 1}
+    rgba: 4287532797
+  m_fontColor: {r: 0.99215686, g: 0.5568628, b: 0.5568628, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
