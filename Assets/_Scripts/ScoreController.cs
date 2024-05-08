@@ -14,9 +14,12 @@ public class ScoreController : MonoBehaviour
     public static int Score;
     public static int BestScore;
 
+    private ButtonsController buttonsController;
+
     private void Start()
     {
         //BestScore = PlayerPrefs.GetInt("BestScore", 0);
+        buttonsController = GetComponent<ButtonsController>();
         Score = 0;
     }
 
@@ -33,6 +36,7 @@ public class ScoreController : MonoBehaviour
 
     private IEnumerator ShowWin()
     {
+        buttonsController.PlayWinSound();
         yield return new WaitForSeconds(0.5f);
         winLevel.SetActive(true);
         PlayerPrefs.SetString("SameColor", "no");

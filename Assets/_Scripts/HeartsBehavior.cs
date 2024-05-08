@@ -9,6 +9,13 @@ public class HeartsBehavior : MonoBehaviour
 
     [SerializeField] private GameObject _gameover;
 
+    private ButtonsController buttonsController;
+
+    private void Start()
+    {
+        buttonsController = GetComponent<ButtonsController>();
+    }
+
     public void LoveHeart()
     {
         StartCoroutine(LoseOneHeart());
@@ -33,7 +40,7 @@ public class HeartsBehavior : MonoBehaviour
             _heartsBroken[0].SetActive(true);
             yield return new WaitForSeconds(0.5f);
             _heartsGrey[0].SetActive(true);
-
+            buttonsController.PlayLooseSound();
             yield return new WaitForSeconds(0.5f);
             _gameover.SetActive(true);
             PlayerPrefs.SetString("SameColor", "yes");
