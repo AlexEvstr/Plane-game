@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ButtonsController : MonoBehaviour
 {
     [SerializeField] private GameObject _pausePanel;
-    public static bool Vibration;
+    public static bool canVibration;
 
     private AudioSource _audioSource;
     [SerializeField] private AudioClip _clickSound;
@@ -19,17 +19,18 @@ public class ButtonsController : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1;
+        Vibration.Init();
 
         _audioSource = GetComponent<AudioSource>();
 
         int vibro = PlayerPrefs.GetInt("vibration", 1);
         if (vibro == 0)
         {
-            Vibration = false;
+            canVibration = false;
         }
         else
         {
-            Vibration = true;
+            canVibration = true;
         }
     }
 
@@ -57,14 +58,17 @@ public class ButtonsController : MonoBehaviour
 
     public void PlayClickSound()
     {
+        if (canVibration) Vibration.VibratePop();
         _audioSource.PlayOneShot(_clickSound);
     }
     public void PlayExplosionSound()
     {
+        if (canVibration) Vibration.VibrateNope();
         _audioSource.PlayOneShot(_explosionSound);
     }
     public void PlayGoodShotSound()
     {
+        if (canVibration) Vibration.VibratePeek();
         _audioSource.PlayOneShot(_goodShotSound);
     }
     public void PlayLooseSound()
@@ -73,6 +77,7 @@ public class ButtonsController : MonoBehaviour
     }
     public void PlayShootSound()
     {
+        if (canVibration) Vibration.VibratePop();
         _audioSource.PlayOneShot(_shotSoundd);
     }
     public void PlayWinSound()

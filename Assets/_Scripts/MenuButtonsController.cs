@@ -17,11 +17,12 @@ public class MenuButtonsController : MonoBehaviour
     [SerializeField] private GameObject _vibroOn;
     [SerializeField] private GameObject _vibroOff;
 
-    public static bool Vibration;
+    public static bool canVibration;
 
     private void Start()
     {
         Time.timeScale = 1;
+        Vibration.Init();
         _audioSource = GetComponent<AudioSource>();
 
         int vibro = PlayerPrefs.GetInt("vibration", 1);
@@ -29,13 +30,13 @@ public class MenuButtonsController : MonoBehaviour
         {
             _vibroOn.SetActive(false);
             _vibroOff.SetActive(true);
-            Vibration = false;
+            canVibration = false;
         }
         else
         {
             _vibroOff.SetActive(false);
             _vibroOn.SetActive(true);
-            Vibration = true;
+            canVibration = true;
         }
 
         float volume = PlayerPrefs.GetInt("audio", 1);
@@ -55,37 +56,37 @@ public class MenuButtonsController : MonoBehaviour
 
     public void PlayBtn()
     {
-        _audioSource.PlayOneShot(_click);
+        PlayClickSound();
         _levelsPanel.SetActive(true);
     }
 
     public void ShopBtn()
     {
-        _audioSource.PlayOneShot(_click);
+        PlayClickSound();
         _shopPanel.SetActive(true);
     }
 
     public void CloseShopBtn()
     {
-        _audioSource.PlayOneShot(_click);
+        PlayClickSound();
         _shopPanel.SetActive(false);
     }
 
     public void TutorialBtn()
     {
-        _audioSource.PlayOneShot(_click);
+        PlayClickSound();
         _tutorial.SetActive(true);
     }
 
     public void CloseTutorial()
     {
-        _audioSource.PlayOneShot(_click);
+        PlayClickSound();
         _tutorial.SetActive(false);
     }
 
     public void SoudOffBtn()
     {
-        _audioSource.PlayOneShot(_click);
+        PlayClickSound();
         _soundOn.SetActive(false);
         _soundOff.SetActive(true);
         AudioListener.volume = 0;
@@ -94,7 +95,7 @@ public class MenuButtonsController : MonoBehaviour
 
     public void SoudOnBtn()
     {
-        _audioSource.PlayOneShot(_click);
+        PlayClickSound();
         _soundOff.SetActive(false);
         _soundOn.SetActive(true);
         AudioListener.volume = 1;
@@ -103,24 +104,25 @@ public class MenuButtonsController : MonoBehaviour
 
     public void VibroOffBtn()
     {
-        _audioSource.PlayOneShot(_click);
+        PlayClickSound();
         _vibroOn.SetActive(false);
         _vibroOff.SetActive(true);
-        Vibration = false;
+        canVibration = false;
         PlayerPrefs.SetInt("vibration", 0);
     }
 
     public void VibroOnBtn()
     {
-        _audioSource.PlayOneShot(_click);
+        PlayClickSound();
         _vibroOff.SetActive(false);
         _vibroOn.SetActive(true);
-        Vibration = true;
+        canVibration = true;
         PlayerPrefs.SetInt("vibration", 1);
     }
 
     public void PlayClickSound()
     {
         _audioSource.PlayOneShot(_click);
+        if (canVibration) Vibration.VibratePop();
     }
 }

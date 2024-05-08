@@ -24,7 +24,6 @@ public class ConstructionColor : MonoBehaviour
         }
         else
         {
-            Debug.Log("no");
             indexArray = new int[_mainSprites.Length];
             for (int i = 0; i < _mainSprites.Length; i++)
             {
