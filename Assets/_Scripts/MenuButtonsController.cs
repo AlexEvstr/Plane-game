@@ -6,6 +6,12 @@ public class MenuButtonsController : MonoBehaviour
 {
     [SerializeField] private GameObject _levelsPanel;
     [SerializeField] private GameObject _shopPanel;
+
+    private void Start()
+    {
+        Time.timeScale = 1;
+    }
+
     public void PlayBtn()
     {
         _levelsPanel.SetActive(true);
@@ -20,5 +26,4 @@ public class MenuButtonsController : MonoBehaviour
     {
         _shopPanel.SetActive(false);
     }
-
 }

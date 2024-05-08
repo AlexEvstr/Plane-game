@@ -12,7 +12,7 @@ public class PlaneChooser : MonoBehaviour
         int plane = PlayerPrefs.GetInt("Plane", 0);
         if (plane == int.Parse(gameObject.name))
         {
-            GetComponent<Image>().color = new Color(0.5f, 0.5f, 0.5f);
+            GetComponent<Image>().color = new Color(1f, 1f, 1f);
             _tick.transform.SetParent(transform);
         }
         else
@@ -42,11 +42,12 @@ public class PlaneChooser : MonoBehaviour
     {
         if (transform.childCount == 3)
         {
-            GetComponent<Image>().color = new Color(0.5f, 0.5f, 0.5f);
+            GetComponent<Image>().color = new Color(1f, 1f, 1f);
         }
         else
         {
             GetComponent<Image>().color = new Color(0.75f, 0.75f, 0.75f);
+            transform.GetChild(1).transform.GetComponent<Image>().color = new Color(0.75f, 0.75f, 0.75f);
         }
     }
 }

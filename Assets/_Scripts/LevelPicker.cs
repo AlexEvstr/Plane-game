@@ -17,7 +17,7 @@ public class LevelPicker : MonoBehaviour
         else
         {
             GetComponent<Button>().enabled = true;
-            GetComponent<Image>().color = new Color(0.9f,0.9f,0.9f);
+            GetComponent<Image>().color = new Color(1f,1f,1f);
         }
     }
 
