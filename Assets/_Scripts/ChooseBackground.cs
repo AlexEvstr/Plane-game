@@ -7,6 +7,12 @@ public class ChooseBackground : MonoBehaviour
 {
     [SerializeField] private GameObject _tick;
 
+    [SerializeField] private Image _background;
+    [SerializeField] private Image _pauseBackground;
+    [SerializeField] private Image _winBackground;
+    [SerializeField] private Image _loseBackground;
+    [SerializeField] private Sprite[] _backgrounds;
+
     private void Start()
     {
         int plane = PlayerPrefs.GetInt("Background", 0);
@@ -36,6 +42,11 @@ public class ChooseBackground : MonoBehaviour
     {
         _tick.transform.SetParent(transform);
         PlayerPrefs.SetInt("Background", int.Parse(gameObject.name));
+        int background = PlayerPrefs.GetInt("Background", 0);
+        _background.sprite = _backgrounds[background];
+        _pauseBackground.sprite = _backgrounds[background];
+        _winBackground.sprite = _backgrounds[background];
+        _loseBackground.sprite = _backgrounds[background];
     }
 
     private void Update()

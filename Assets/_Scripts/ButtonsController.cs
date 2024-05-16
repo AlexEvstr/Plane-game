@@ -19,6 +19,7 @@ public class ButtonsController : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1;
+        Screen.orientation = ScreenOrientation.Portrait;
         Vibration.Init();
 
         _audioSource = GetComponent<AudioSource>();

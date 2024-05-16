@@ -35,6 +35,7 @@ public class ChooseConstruction : MonoBehaviour
     public void PickConstruction()
     {
         _tick.transform.SetParent(transform);
+        PlayerPrefs.SetString("SameColor", "no");
         PlayerPrefs.SetInt("Construction", int.Parse(gameObject.name));
     }
 
